@@ -25,8 +25,8 @@ export default function CourseFilter({
             onClick={() => onCategoryChange(cat)}
             className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
               selectedCategory === cat
-                ? "bg-indigo-600 text-white"
-                : "bg-gray-100 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                ? "bg-blue-700 text-white"
+                : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-700"
             }`}
           >
             {cat}
@@ -38,7 +38,7 @@ export default function CourseFilter({
       <select
         value={selectedLevel}
         onChange={(e) => onLevelChange(e.target.value)}
-        className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         {COURSE_LEVELS.map((level) => (
           <option key={level} value={level}>

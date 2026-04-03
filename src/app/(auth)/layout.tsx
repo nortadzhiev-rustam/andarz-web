@@ -7,10 +7,10 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-indigo-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-blue-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link href="/" className="flex justify-center">
-          <span className="text-3xl font-extrabold text-indigo-600">{SITE_NAME}</span>
+          <span className="text-3xl font-extrabold text-blue-700">{SITE_NAME}</span>
         </Link>
       </div>
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">

@@ -49,18 +49,18 @@ export default function Hero() {
   const slide = slides[current];
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] flex items-center">
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#020617] via-[#0c1a4f] to-[#0f172a] flex items-center">
       {/* Animated background blobs */}
       <div className="absolute inset-0 pointer-events-none select-none" aria-hidden>
         <div
-          className="animate-blob absolute top-1/4 left-[10%] w-[32rem] h-[32rem] rounded-full bg-indigo-600/25 blur-3xl"
+          className="animate-blob absolute top-1/4 left-[10%] w-[32rem] h-[32rem] rounded-full bg-blue-600/25 blur-3xl"
         />
         <div
-          className="animate-blob absolute top-[55%] right-[8%] w-[26rem] h-[26rem] rounded-full bg-purple-600/25 blur-3xl"
+          className="animate-blob absolute top-[55%] right-[8%] w-[26rem] h-[26rem] rounded-full bg-blue-400/20 blur-3xl"
           style={{ animationDelay: "3s" }}
         />
         <div
-          className="animate-blob absolute bottom-[10%] left-[35%] w-[22rem] h-[22rem] rounded-full bg-pink-500/15 blur-3xl"
+          className="animate-blob absolute bottom-[10%] left-[35%] w-[22rem] h-[22rem] rounded-full bg-sky-400/15 blur-3xl"
           style={{ animationDelay: "6s" }}
         />
       </div>
@@ -78,7 +78,7 @@ export default function Hero() {
             }}
           >
             {/* Badge */}
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-indigo-300 backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-blue-300 backdrop-blur-sm">
               {slide.badge}
             </span>
 
@@ -88,7 +88,7 @@ export default function Hero() {
                 i === slide.accentIdx ? (
                   <span
                     key={i}
-                    className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                    className="block bg-gradient-to-r from-blue-300 via-sky-300 to-blue-500 bg-clip-text text-transparent"
                   >
                     {word}
                   </span>
@@ -109,7 +109,7 @@ export default function Hero() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/courses"
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-indigo-500/30 transition-all hover:-translate-y-0.5 hover:from-indigo-500 hover:to-purple-500 hover:shadow-indigo-500/50"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-700 to-blue-900 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5 hover:from-blue-600 hover:to-blue-800 hover:shadow-blue-500/50"
               >
                 Browse Courses →
               </Link>
@@ -136,7 +136,7 @@ export default function Hero() {
                   aria-label={`Go to slide ${i + 1}`}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     i === current
-                      ? "w-8 bg-indigo-400"
+                      ? "w-8 bg-blue-400"
                       : "w-2 bg-white/30 hover:bg-white/50"
                   }`}
                 />
@@ -169,12 +169,12 @@ export default function Hero() {
 
             {/* Decorative ring top-right */}
             <div
-              className="animate-spin-slow absolute right-10 top-10 h-28 w-28 rounded-full border border-indigo-400/20"
+              className="animate-spin-slow absolute right-10 top-10 h-28 w-28 rounded-full border border-blue-400/20"
               aria-hidden
             />
             {/* Decorative ring bottom-left */}
             <div
-              className="animate-spin-slow absolute bottom-16 left-12 h-20 w-20 rounded-full border border-purple-400/20"
+              className="animate-spin-slow absolute bottom-16 left-12 h-20 w-20 rounded-full border border-blue-400/20"
               aria-hidden
               style={{ animationDelay: "8s", animationDirection: "reverse" }}
             />
@@ -201,7 +201,7 @@ export default function Hero() {
               style={{ animationDelay: "0.5s" }}
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/50 text-xl">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600/50 text-xl">
                   👨‍🎓
                 </div>
                 <div>
@@ -217,11 +217,11 @@ export default function Hero() {
               style={{ animationDelay: "1s" }}
             >
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 text-2xl">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-blue-900 text-2xl">
                   📚
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-indigo-300">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-blue-300">
                     Featured Course
                   </p>
                   <p className="font-bold text-white">React.js for Beginners</p>
@@ -234,7 +234,7 @@ export default function Hero() {
               </div>
               {/* Progress bar */}
               <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-                <div className="h-1.5 w-3/4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500" />
+                <div className="h-1.5 w-3/4 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />
               </div>
               <p className="mt-1.5 text-xs text-gray-500">75% completed by students</p>
             </div>
@@ -245,7 +245,7 @@ export default function Hero() {
               style={{ animationDelay: "2s" }}
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-pink-500/50 text-xl">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/50 text-xl">
                   🏆
                 </div>
                 <div>

@@ -21,7 +21,7 @@ export default function FeaturedCourses({ courses }: FeaturedCoursesProps) {
           </div>
           <Link
             href="/courses"
-            className="hidden sm:inline-flex text-sm font-semibold text-indigo-600 hover:text-indigo-500"
+            className="hidden sm:inline-flex text-sm font-semibold text-blue-700 hover:text-blue-600"
           >
             View all courses →
           </Link>
@@ -36,7 +36,7 @@ export default function FeaturedCourses({ courses }: FeaturedCoursesProps) {
         <div className="mt-8 text-center sm:hidden">
           <Link
             href="/courses"
-            className="text-sm font-semibold text-indigo-600 hover:text-indigo-500"
+            className="text-sm font-semibold text-blue-700 hover:text-blue-600"
           >
             View all courses →
           </Link>

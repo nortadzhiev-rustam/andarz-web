@@ -38,7 +38,7 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {/* Info */}
             <div className="lg:col-span-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-indigo-400">
+              <span className="text-xs font-semibold uppercase tracking-wider text-blue-400">
                 {course.category}
               </span>
               <h1 className="mt-2 text-3xl font-extrabold">{course.title}</h1>
@@ -61,7 +61,7 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
 
             {/* Purchase card */}
             <div className="rounded-xl bg-white text-gray-900 p-6 shadow-lg lg:sticky lg:top-20 self-start">
-              <div className="relative h-44 w-full rounded-lg bg-indigo-100 overflow-hidden">
+              <div className="relative h-44 w-full rounded-lg bg-blue-100 overflow-hidden">
                 {course.thumbnail && (
                   <Image
                     src={course.thumbnail}
@@ -87,7 +87,7 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
                   </>
                 )}
               </div>
-              <button className="mt-4 w-full rounded-lg bg-indigo-600 py-3 text-sm font-semibold text-white hover:bg-indigo-500 transition-colors">
+              <button className="mt-4 w-full rounded-lg bg-blue-700 py-3 text-sm font-semibold text-white hover:bg-blue-600 transition-colors">
                 Enroll Now
               </button>
               <p className="mt-2 text-center text-xs text-gray-400">
@@ -152,7 +152,7 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
             <section>
               <h2 className="text-xl font-bold text-gray-900">Your Instructor</h2>
               <div className="mt-4 flex items-start gap-4">
-                <div className="relative h-14 w-14 rounded-full bg-indigo-100 overflow-hidden flex-shrink-0">
+                <div className="relative h-14 w-14 rounded-full bg-blue-100 overflow-hidden flex-shrink-0">
                   {course.instructor.avatar && (
                     <Image
                       src={course.instructor.avatar}
