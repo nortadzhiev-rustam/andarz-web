@@ -72,8 +72,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
 
         {/* Content */}
-        <div className="prose prose-indigo mt-8 max-w-none">
-          <p>{post.content}</p>
+        <div className="mt-8 max-w-none text-base leading-7 text-gray-700">
+          <p className="mt-4">{post.content}</p>
         </div>
 
         {/* Tags */}
