@@ -33,7 +33,7 @@ export default async function HomePage() {
               <Link
                 key={cat.name}
                 href={`/courses?category=${encodeURIComponent(cat.name)}`}
-                className="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-100 hover:ring-indigo-300 hover:shadow-md transition"
+                className="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-100 hover:ring-blue-300 hover:shadow-md transition"
               >
                 <span className="text-3xl">{cat.icon}</span>
                 <span className="mt-2 text-sm font-medium text-gray-700">
@@ -46,17 +46,17 @@ export default async function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-indigo-600">
+      <section className="py-20 bg-blue-700">
         <div className="mx-auto max-w-3xl px-4 text-center">
           <h2 className="text-3xl font-extrabold text-white">
             Start Learning Today
           </h2>
-          <p className="mt-4 text-lg text-indigo-100">
+          <p className="mt-4 text-lg text-blue-100">
             Join over 20,000 students and unlock your career potential.
           </p>
           <Link
             href="/register"
-            className="mt-8 inline-block rounded-lg bg-white px-6 py-3 text-base font-semibold text-indigo-600 shadow hover:bg-indigo-50 transition-colors"
+            className="mt-8 inline-block rounded-lg bg-white px-6 py-3 text-base font-semibold text-blue-700 shadow hover:bg-blue-50 transition-colors"
           >
             Create a Free Account
           </Link>

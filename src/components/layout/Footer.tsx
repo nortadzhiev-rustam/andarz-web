@@ -11,7 +11,7 @@ export default function Footer() {
             <Link href="/" className="text-2xl font-bold text-white">
               {SITE_NAME}
             </Link>
-            <p className="mt-2 text-sm text-indigo-400 font-medium">{SITE_TAGLINE}</p>
+            <p className="mt-2 text-sm text-blue-400 font-medium">{SITE_TAGLINE}</p>
             <p className="mt-3 text-sm text-gray-400 max-w-xs">
               Empowering learners worldwide with high-quality online education in
               technology, design, and beyond.

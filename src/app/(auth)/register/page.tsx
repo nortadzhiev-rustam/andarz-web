@@ -21,7 +21,7 @@ export default function RegisterPage() {
         </p>
         <Link
           href="/login"
-          className="mt-6 inline-block rounded-lg bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500"
+          className="mt-6 inline-block rounded-lg bg-blue-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-blue-600"
         >
           Sign in
         </Link>
@@ -43,7 +43,7 @@ export default function RegisterPage() {
               id="reg-first-name"
               type="text"
               required
-              className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="John"
             />
           </div>
@@ -55,7 +55,7 @@ export default function RegisterPage() {
               id="reg-last-name"
               type="text"
               required
-              className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Doe"
             />
           </div>
@@ -69,7 +69,7 @@ export default function RegisterPage() {
             id="reg-email"
             type="email"
             required
-            className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="you@example.com"
           />
         </div>
@@ -83,14 +83,14 @@ export default function RegisterPage() {
             type="password"
             required
             minLength={8}
-            className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Min. 8 characters"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full rounded-lg bg-indigo-600 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 transition-colors"
+          className="w-full rounded-lg bg-blue-700 py-2.5 text-sm font-semibold text-white hover:bg-blue-600 transition-colors"
         >
           Create Account
         </button>
@@ -98,7 +98,7 @@ export default function RegisterPage() {
 
       <p className="mt-6 text-center text-sm text-gray-500">
         Already have an account?{" "}
-        <Link href="/login" className="font-semibold text-indigo-600 hover:text-indigo-500">
+        <Link href="/login" className="font-semibold text-blue-700 hover:text-blue-600">
           Sign in
         </Link>
       </p>

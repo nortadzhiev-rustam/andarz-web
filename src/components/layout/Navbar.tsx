@@ -10,7 +10,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#1e1b4b]/80 shadow-lg shadow-black/20 backdrop-blur-xl backdrop-saturate-150">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0c1a4f]/80 shadow-lg shadow-black/20 backdrop-blur-xl backdrop-saturate-150">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -80,7 +80,7 @@ export default function Navbar() {
 
       {/* Mobile menu — liquid glass drawer */}
       {menuOpen && (
-        <div className="md:hidden border-t border-white/10 bg-[#1e1b4b]/90 px-4 pb-5 pt-3 backdrop-blur-2xl backdrop-saturate-200">
+        <div className="md:hidden border-t border-white/10 bg-[#0c1a4f]/90 px-4 pb-5 pt-3 backdrop-blur-2xl backdrop-saturate-200">
           <nav className="flex flex-col gap-1.5">
             {NAV_LINKS.map((link) => {
               const isActive =

@@ -19,7 +19,7 @@ export default function CourseCard({ course }: CourseCardProps) {
       className="group flex flex-col rounded-xl overflow-hidden bg-white shadow hover:shadow-md transition-shadow ring-1 ring-gray-100"
     >
       {/* Thumbnail */}
-      <div className="relative h-44 w-full bg-indigo-100">
+      <div className="relative h-44 w-full bg-blue-100">
         {course.thumbnail ? (
           <Image
             src={course.thumbnail}
@@ -29,7 +29,7 @@ export default function CourseCard({ course }: CourseCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center text-indigo-300 text-4xl font-bold">
+          <div className="flex h-full w-full items-center justify-center text-blue-300 text-4xl font-bold">
             {course.title[0]}
           </div>
         )}
@@ -42,10 +42,10 @@ export default function CourseCard({ course }: CourseCardProps) {
 
       {/* Content */}
       <div className="flex flex-1 flex-col p-4">
-        <span className="text-xs font-medium text-indigo-600 uppercase tracking-wide">
+        <span className="text-xs font-medium text-blue-700 uppercase tracking-wide">
           {course.category}
         </span>
-        <h3 className="mt-1 text-sm font-semibold text-gray-900 group-hover:text-indigo-600 line-clamp-2">
+        <h3 className="mt-1 text-sm font-semibold text-gray-900 group-hover:text-blue-700 line-clamp-2">
           {course.title}
         </h3>
         <p className="mt-1 text-xs text-gray-500">{course.instructor.name}</p>

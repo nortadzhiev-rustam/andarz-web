@@ -37,7 +37,7 @@ export default function AboutPage() {
   return (
     <MainLayout>
       {/* Hero */}
-      <section className="bg-indigo-50 py-16">
+      <section className="bg-blue-50 py-16">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold text-gray-900">About Andarz</h1>
           <p className="mt-4 text-lg text-gray-600">
@@ -86,11 +86,11 @@ export default function AboutPage() {
           <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {team.map((member) => (
               <div key={member.name} className="rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-100">
-                <div className="mx-auto h-20 w-20 rounded-full bg-indigo-100 flex items-center justify-center text-3xl font-bold text-indigo-400">
+                <div className="mx-auto h-20 w-20 rounded-full bg-blue-100 flex items-center justify-center text-3xl font-bold text-blue-400">
                   {member.name[0]}
                 </div>
                 <h3 className="mt-4 font-semibold text-gray-900">{member.name}</h3>
-                <p className="text-xs text-indigo-600 font-medium">{member.role}</p>
+                <p className="text-xs text-blue-700 font-medium">{member.role}</p>
                 <p className="mt-2 text-xs text-gray-500">{member.bio}</p>
               </div>
             ))}

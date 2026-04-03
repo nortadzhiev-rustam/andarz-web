@@ -14,7 +14,7 @@ export default function BlogCard({ post }: BlogCardProps) {
       className="group flex flex-col rounded-xl overflow-hidden bg-white shadow hover:shadow-md transition-shadow ring-1 ring-gray-100"
     >
       {/* Thumbnail */}
-      <div className="relative h-48 w-full bg-indigo-50">
+      <div className="relative h-48 w-full bg-blue-50">
         {post.thumbnail ? (
           <Image
             src={post.thumbnail}
@@ -24,7 +24,7 @@ export default function BlogCard({ post }: BlogCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
-          <div className="flex h-full items-center justify-center text-4xl text-indigo-200 font-bold">
+          <div className="flex h-full items-center justify-center text-4xl text-blue-200 font-bold">
             {post.title[0]}
           </div>
         )}
@@ -32,10 +32,10 @@ export default function BlogCard({ post }: BlogCardProps) {
 
       {/* Content */}
       <div className="flex flex-1 flex-col p-4">
-        <span className="text-xs font-medium uppercase tracking-wide text-indigo-600">
+        <span className="text-xs font-medium uppercase tracking-wide text-blue-700">
           {post.category}
         </span>
-        <h3 className="mt-1 text-sm font-semibold text-gray-900 group-hover:text-indigo-600 line-clamp-2">
+        <h3 className="mt-1 text-sm font-semibold text-gray-900 group-hover:text-blue-700 line-clamp-2">
           {post.title}
         </h3>
         <p className="mt-2 text-xs text-gray-500 line-clamp-3">{post.excerpt}</p>
