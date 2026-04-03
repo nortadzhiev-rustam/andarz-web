@@ -33,8 +33,7 @@ src/
 │   ├── blog/                 # BlogCard
 │   ├── courses/              # CourseCard, CourseFilter, CoursesList
 │   ├── home/                 # Hero, FeaturedCourses
-│   ├── layout/               # Navbar, Footer, MainLayout
-│   └── ui/                   # Shared UI components
+│   └── layout/               # Navbar, Footer, MainLayout
 ├── context/                  # AuthContext, CartContext
 ├── data/                     # Mock data (courses, blogPosts)
 ├── hooks/                    # useCourses, useAuth
