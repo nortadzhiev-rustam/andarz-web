@@ -43,20 +43,15 @@ export default function Footer() {
               Legal
             </h3>
             <ul className="mt-4 space-y-2">
-              {[
-                { label: "Privacy Policy", href: "/privacy" },
-                { label: "Terms of Service", href: "/terms" },
-                { label: "Cookie Policy", href: "/cookies" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
+                (label) => (
+                  <li key={label}>
+                    <span className="text-sm text-gray-500 cursor-default">
+                      {label}
+                    </span>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </div>

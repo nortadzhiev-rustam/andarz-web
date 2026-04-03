@@ -8,7 +8,12 @@ export const metadata: Metadata = {
   description: "Browse all available courses on Andarz.",
 };
 
-export default async function CoursesPage() {
+interface CoursesPageProps {
+  searchParams: Promise<{ category?: string }>;
+}
+
+export default async function CoursesPage({ searchParams }: CoursesPageProps) {
+  const { category } = await searchParams;
   const courses = await getCourses();
 
   return (
@@ -23,7 +28,7 @@ export default async function CoursesPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <CoursesList courses={courses} />
+        <CoursesList courses={courses} initialCategory={category ?? "All"} />
       </div>
     </MainLayout>
   );

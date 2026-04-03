@@ -7,10 +7,11 @@ import CourseFilter from "@/components/courses/CourseFilter";
 
 interface CoursesListProps {
   courses: Course[];
+  initialCategory?: string;
 }
 
-export default function CoursesList({ courses }: CoursesListProps) {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+export default function CoursesList({ courses, initialCategory = "All" }: CoursesListProps) {
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedLevel, setSelectedLevel] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 

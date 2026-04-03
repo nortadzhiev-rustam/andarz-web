@@ -36,10 +36,11 @@ export default function RegisterPage() {
       <form onSubmit={handleSubmit} className="mt-6 space-y-5">
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label htmlFor="reg-first-name" className="block text-sm font-medium text-gray-700">
               First name
             </label>
             <input
+              id="reg-first-name"
               type="text"
               required
               className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -47,10 +48,11 @@ export default function RegisterPage() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label htmlFor="reg-last-name" className="block text-sm font-medium text-gray-700">
               Last name
             </label>
             <input
+              id="reg-last-name"
               type="text"
               required
               className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -60,10 +62,11 @@ export default function RegisterPage() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700">
+          <label htmlFor="reg-email" className="block text-sm font-medium text-gray-700">
             Email address
           </label>
           <input
+            id="reg-email"
             type="email"
             required
             className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -72,10 +75,11 @@ export default function RegisterPage() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700">
+          <label htmlFor="reg-password" className="block text-sm font-medium text-gray-700">
             Password
           </label>
           <input
+            id="reg-password"
             type="password"
             required
             minLength={8}

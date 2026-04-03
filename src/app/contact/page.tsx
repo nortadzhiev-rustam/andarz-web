@@ -63,10 +63,11 @@ export default function ContactPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700">
                     Full Name
                   </label>
                   <input
+                    id="contact-name"
                     type="text"
                     required
                     className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -74,10 +75,11 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="contact-email" className="block text-sm font-medium text-gray-700">
                     Email Address
                   </label>
                   <input
+                    id="contact-email"
                     type="email"
                     required
                     className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -85,10 +87,11 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="contact-subject" className="block text-sm font-medium text-gray-700">
                     Subject
                   </label>
                   <input
+                    id="contact-subject"
                     type="text"
                     required
                     className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -96,10 +99,11 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700">
                     Message
                   </label>
                   <textarea
+                    id="contact-message"
                     required
                     rows={5}
                     className="mt-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"

@@ -32,10 +32,11 @@ export default function LoginPage() {
         )}
 
         <div>
-          <label className="block text-sm font-medium text-gray-700">
+          <label htmlFor="login-email" className="block text-sm font-medium text-gray-700">
             Email address
           </label>
           <input
+            id="login-email"
             type="email"
             required
             value={email}
@@ -46,10 +47,11 @@ export default function LoginPage() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700">
+          <label htmlFor="login-password" className="block text-sm font-medium text-gray-700">
             Password
           </label>
           <input
+            id="login-password"
             type="password"
             required
             value={password}

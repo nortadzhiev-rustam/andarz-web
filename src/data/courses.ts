@@ -9,7 +9,7 @@ export const courses: Course[] = [
       "Learn the fundamentals of web development including HTML, CSS, and JavaScript. This comprehensive course covers everything you need to get started building websites from scratch.",
     shortDescription:
       "Master HTML, CSS, and JavaScript to build modern websites.",
-    thumbnail: "/images/courses/web-dev.jpg",
+    thumbnail: "",
     price: 49.99,
     discountPrice: 29.99,
     level: "beginner",
@@ -18,7 +18,7 @@ export const courses: Course[] = [
     instructor: {
       id: "i1",
       name: "Sarah Johnson",
-      avatar: "/images/team/sarah.jpg",
+      avatar: "",
       bio: "Full-stack developer with 10+ years of experience.",
     },
     modules: [
@@ -88,7 +88,7 @@ export const courses: Course[] = [
       "A complete guide to building modern user interfaces with React.js. Learn components, state management, hooks, and more.",
     shortDescription:
       "Build dynamic UIs with React.js from the ground up.",
-    thumbnail: "/images/courses/react.jpg",
+    thumbnail: "",
     price: 59.99,
     discountPrice: 39.99,
     level: "intermediate",
@@ -97,7 +97,7 @@ export const courses: Course[] = [
     instructor: {
       id: "i2",
       name: "David Kim",
-      avatar: "/images/team/david.jpg",
+      avatar: "",
       bio: "React specialist and open-source contributor.",
     },
     modules: [
@@ -136,7 +136,7 @@ export const courses: Course[] = [
     description:
       "Dive into data science using Python. Covers NumPy, Pandas, Matplotlib, and machine learning fundamentals.",
     shortDescription: "Analyze and visualize data with Python.",
-    thumbnail: "/images/courses/python.jpg",
+    thumbnail: "",
     price: 69.99,
     level: "intermediate",
     category: "Data Science",
@@ -144,7 +144,7 @@ export const courses: Course[] = [
     instructor: {
       id: "i3",
       name: "Priya Patel",
-      avatar: "/images/team/priya.jpg",
+      avatar: "",
       bio: "Data scientist with expertise in Python and ML.",
     },
     modules: [],
@@ -164,7 +164,7 @@ export const courses: Course[] = [
     description:
       "Learn the foundations of user interface and user experience design. Covers wireframing, prototyping, and Figma.",
     shortDescription: "Design beautiful, user-friendly interfaces.",
-    thumbnail: "/images/courses/uxui.jpg",
+    thumbnail: "",
     price: 44.99,
     discountPrice: 24.99,
     level: "beginner",
@@ -173,7 +173,7 @@ export const courses: Course[] = [
     instructor: {
       id: "i4",
       name: "Maria Gonzalez",
-      avatar: "/images/team/maria.jpg",
+      avatar: "",
       bio: "Senior UX designer with a passion for education.",
     },
     modules: [],
@@ -193,7 +193,7 @@ export const courses: Course[] = [
     description:
       "Build robust server-side applications with Node.js and Express. Covers REST APIs, authentication, and databases.",
     shortDescription: "Create scalable backends with Node.js and Express.",
-    thumbnail: "/images/courses/nodejs.jpg",
+    thumbnail: "",
     price: 54.99,
     level: "intermediate",
     category: "Backend Development",
@@ -201,7 +201,7 @@ export const courses: Course[] = [
     instructor: {
       id: "i2",
       name: "David Kim",
-      avatar: "/images/team/david.jpg",
+      avatar: "",
       bio: "Full-stack developer and open-source contributor.",
     },
     modules: [],
@@ -221,7 +221,7 @@ export const courses: Course[] = [
     description:
       "Take your TypeScript skills to the next level. Covers advanced types, generics, decorators, and real-world patterns.",
     shortDescription: "Master advanced TypeScript patterns and techniques.",
-    thumbnail: "/images/courses/typescript.jpg",
+    thumbnail: "",
     price: 64.99,
     level: "advanced",
     category: "Web Development",
@@ -229,7 +229,7 @@ export const courses: Course[] = [
     instructor: {
       id: "i1",
       name: "Sarah Johnson",
-      avatar: "/images/team/sarah.jpg",
+      avatar: "",
       bio: "Full-stack developer with 10+ years of experience.",
     },
     modules: [],

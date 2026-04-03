@@ -9,11 +9,11 @@ export const blogPosts: BlogPost[] = [
       "Accelerate your web development journey with these practical tips from industry professionals.",
     content:
       "Learning web development can feel overwhelming at first, but with the right approach you can make rapid progress...",
-    thumbnail: "/images/blog/web-dev-tips.jpg",
+    thumbnail: "",
     author: {
       id: "a1",
       name: "Sarah Johnson",
-      avatar: "/images/team/sarah.jpg",
+      avatar: "",
     },
     tags: ["Learning", "Web Development", "Tips"],
     category: "Learning",
@@ -29,11 +29,11 @@ export const blogPosts: BlogPost[] = [
       "TypeScript is transforming how developers write JavaScript. Here's why you should make the switch.",
     content:
       "TypeScript has taken the JavaScript ecosystem by storm, and for good reason...",
-    thumbnail: "/images/blog/typescript.jpg",
+    thumbnail: "",
     author: {
       id: "a2",
       name: "David Kim",
-      avatar: "/images/team/david.jpg",
+      avatar: "",
     },
     tags: ["TypeScript", "JavaScript", "Development"],
     category: "Technology",
@@ -49,11 +49,11 @@ export const blogPosts: BlogPost[] = [
       "How technology is reshaping the way we learn and what it means for students and educators.",
     content:
       "Online education has seen explosive growth over the past few years...",
-    thumbnail: "/images/blog/online-education.jpg",
+    thumbnail: "",
     author: {
       id: "a3",
       name: "Priya Patel",
-      avatar: "/images/team/priya.jpg",
+      avatar: "",
     },
     tags: ["Education", "Technology", "eLearning"],
     category: "Education",

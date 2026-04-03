@@ -1,3 +1,4 @@
+import Link from "next/link";
 import MainLayout from "@/components/layout/MainLayout";
 import Hero from "@/components/home/Hero";
 import FeaturedCourses from "@/components/home/FeaturedCourses";
@@ -25,11 +26,11 @@ export default async function HomePage() {
               { name: "Web Development", icon: "🌐" },
               { name: "Data Science", icon: "📊" },
               { name: "Design", icon: "🎨" },
-              { name: "Backend", icon: "⚙️" },
-              { name: "Mobile", icon: "📱" },
+              { name: "Backend Development", icon: "⚙️" },
+              { name: "Mobile Development", icon: "📱" },
               { name: "DevOps", icon: "🚀" },
             ].map((cat) => (
-              <a
+              <Link
                 key={cat.name}
                 href={`/courses?category=${encodeURIComponent(cat.name)}`}
                 className="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-100 hover:ring-indigo-300 hover:shadow-md transition"
@@ -38,7 +39,7 @@ export default async function HomePage() {
                 <span className="mt-2 text-sm font-medium text-gray-700">
                   {cat.name}
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -53,12 +54,12 @@ export default async function HomePage() {
           <p className="mt-4 text-lg text-indigo-100">
             Join over 20,000 students and unlock your career potential.
           </p>
-          <a
+          <Link
             href="/register"
             className="mt-8 inline-block rounded-lg bg-white px-6 py-3 text-base font-semibold text-indigo-600 shadow hover:bg-indigo-50 transition-colors"
           >
             Create a Free Account
-          </a>
+          </Link>
         </div>
       </section>
     </MainLayout>
