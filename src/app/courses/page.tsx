@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 };
 
 interface CoursesPageProps {
-  searchParams: Promise<{ category?: string }>;
+  searchParams: { category?: string };
 }
 
 export default async function CoursesPage({ searchParams }: CoursesPageProps) {
-  const { category } = await searchParams;
+  const { category } = searchParams;
   const courses = await getCourses();
 
   return (
