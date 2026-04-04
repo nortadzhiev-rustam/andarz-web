@@ -3,7 +3,18 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
+import { SITE_NAME } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
+import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
+
+const NAV_KEYS = ["home", "courses", "blog", "about", "contact"] as const;
+const NAV_HREFS: Record<(typeof NAV_KEYS)[number], string> = {
+  home: "/",
+  courses: "/courses",
+  blog: "/blog",
+  about: "/about",
+  contact: "/contact",
+};
 
 function navLinkClass(scrolled: boolean, isActive: boolean): string {
   if (scrolled) {
@@ -20,6 +31,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     let ticking = false;
@@ -66,26 +78,28 @@ export default function Navbar() {
                   : "border-gray-300/60 bg-gray-100/60 shadow-black/5"
               }`}
             >
-              {NAV_LINKS.map((link) => {
+            {NAV_KEYS.map((key) => {
+                const href = NAV_HREFS[key];
                 const isActive =
-                  link.href === "/"
+                  href === "/"
                     ? pathname === "/"
-                    : pathname.startsWith(link.href);
+                    : pathname.startsWith(href);
                 return (
                   <Link
-                    key={link.href}
-                    href={link.href}
+                    key={href}
+                    href={href}
                     className={`relative rounded-xl px-4 py-1.5 text-sm font-medium transition-all duration-200 ${navLinkClass(scrolled, isActive)}`}
                   >
-                    {link.label}
+                    {t.nav[key]}
                   </Link>
                 );
               })}
             </div>
           </nav>
 
-          {/* Auth buttons */}
+          {/* Auth buttons + Language Switcher */}
           <div className="hidden md:flex items-center gap-3">
+            <LanguageSwitcher scrolled={scrolled} />
             <Link
               href="/login"
               className={`text-sm font-medium transition-colors duration-300 ${
@@ -94,7 +108,7 @@ export default function Navbar() {
                   : "text-gray-700 hover:text-gray-900"
               }`}
             >
-              Log in
+              {t.nav.login}
             </Link>
             <Link
               href="/register"
@@ -104,7 +118,7 @@ export default function Navbar() {
                   : "border border-blue-600/30 bg-blue-600/10 text-blue-700 hover:bg-blue-600/20"
               }`}
             >
-              Get Started
+              {t.nav.getStarted}
             </Link>
           </div>
 
@@ -139,25 +153,29 @@ export default function Navbar() {
           }`}
         >
           <nav className="flex flex-col gap-1.5">
-            {NAV_LINKS.map((link) => {
+            {NAV_KEYS.map((key) => {
+              const href = NAV_HREFS[key];
               const isActive =
-                link.href === "/"
+                href === "/"
                   ? pathname === "/"
-                  : pathname.startsWith(link.href);
+                  : pathname.startsWith(href);
               return (
                 <Link
-                  key={link.href}
-                  href={link.href}
+                  key={href}
+                  href={href}
                   onClick={() => setMenuOpen(false)}
                   className={`rounded-xl px-4 py-2.5 text-sm font-medium transition-all ${navLinkClass(scrolled, isActive)}`}
                 >
-                  {link.label}
+                  {t.nav[key]}
                 </Link>
               );
             })}
             <div
               className={`mt-2 h-px ${scrolled ? "bg-white/15" : "bg-gray-200"}`}
             />
+            <div className="px-1 py-1">
+              <LanguageSwitcher scrolled={scrolled} />
+            </div>
             <Link
               href="/login"
               onClick={() => setMenuOpen(false)}
@@ -167,7 +185,7 @@ export default function Navbar() {
                   : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
               }`}
             >
-              Log in
+              {t.nav.login}
             </Link>
             <Link
               href="/register"
@@ -178,7 +196,7 @@ export default function Navbar() {
                   : "border border-blue-600/30 bg-blue-600/10 text-blue-700 hover:bg-blue-600/20"
               }`}
             >
-              Get Started
+              {t.nav.getStarted}
             </Link>
           </nav>
         </div>
