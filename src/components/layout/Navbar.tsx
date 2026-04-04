@@ -5,13 +5,33 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
 
+function navLinkClass(scrolled: boolean, isActive: boolean): string {
+  if (scrolled) {
+    return isActive
+      ? "bg-white/25 text-white shadow-inner shadow-white/10"
+      : "text-white/75 hover:bg-white/15 hover:text-white";
+  }
+  return isActive
+    ? "bg-blue-600/10 text-blue-700"
+    : "text-gray-700 hover:bg-gray-200/70 hover:text-gray-900";
+}
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 0);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 0);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -55,15 +75,7 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`relative rounded-xl px-4 py-1.5 text-sm font-medium transition-all duration-200 ${
-                      scrolled
-                        ? isActive
-                          ? "bg-white/25 text-white shadow-inner shadow-white/10"
-                          : "text-white/75 hover:bg-white/15 hover:text-white"
-                        : isActive
-                          ? "bg-blue-600/10 text-blue-700"
-                          : "text-gray-700 hover:bg-gray-200/70 hover:text-gray-900"
-                    }`}
+                    className={`relative rounded-xl px-4 py-1.5 text-sm font-medium transition-all duration-200 ${navLinkClass(scrolled, isActive)}`}
                   >
                     {link.label}
                   </Link>
@@ -137,15 +149,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`rounded-xl px-4 py-2.5 text-sm font-medium transition-all ${
-                    scrolled
-                      ? isActive
-                        ? "bg-white/25 text-white shadow-inner shadow-white/10"
-                        : "text-white/75 hover:bg-white/15 hover:text-white"
-                      : isActive
-                        ? "bg-blue-600/10 text-blue-700"
-                        : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                  }`}
+                  className={`rounded-xl px-4 py-2.5 text-sm font-medium transition-all ${navLinkClass(scrolled, isActive)}`}
                 >
                   {link.label}
                 </Link>
