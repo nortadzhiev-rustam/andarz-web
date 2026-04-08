@@ -118,7 +118,7 @@ export default function Hero() {
             {/* Stats row */}
             <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
-                { label: t.hero.stats.schoolsServed, value: "15–20" },
+                { label: t.hero.stats.schoolsServed, value: "20" },
                 { label: t.hero.stats.seminarsPerYear, value: "20+" },
                 { label: t.hero.stats.booksPublished, value: "19+" },
                 { label: t.hero.stats.experts, value: "18" },

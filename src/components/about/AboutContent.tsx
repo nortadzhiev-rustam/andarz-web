@@ -6,10 +6,10 @@ const ACTIVITY_ICONS = ["👩‍🏫", "📋", "📊", "🔬", "📚", "🤝"] a
 const ADVANTAGE_ICONS = ["🎯", "📈", "🏷️", "💻", "🌍"] as const;
 
 const STATS_VALUES = [
-  "15–20",
-  "10–15",
+  "20",
+  "15",
   "20+",
-  "300–500",
+  "500+",
   "12",
   "6",
   "19+",
