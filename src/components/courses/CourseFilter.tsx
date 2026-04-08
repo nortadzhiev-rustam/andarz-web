@@ -1,6 +1,7 @@
 "use client";
 
 import { COURSE_CATEGORIES, COURSE_LEVELS } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface CourseFilterProps {
   selectedCategory: string;
@@ -15,6 +16,14 @@ export default function CourseFilter({
   onCategoryChange,
   onLevelChange,
 }: CourseFilterProps) {
+  const { t } = useLanguage();
+
+  function getLevelLabel(level: string): string {
+    if (level === "All") return t.courses.allLevels;
+    const key = level as keyof typeof t.courses.levels;
+    return t.courses.levels[key] ?? level.charAt(0).toUpperCase() + level.slice(1);
+  }
+
   return (
     <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
       {/* Category filter */}
@@ -42,7 +51,7 @@ export default function CourseFilter({
       >
         {COURSE_LEVELS.map((level) => (
           <option key={level} value={level}>
-            {level === "All" ? "All Levels" : level.charAt(0).toUpperCase() + level.slice(1)}
+            {getLevelLabel(level)}
           </option>
         ))}
       </select>

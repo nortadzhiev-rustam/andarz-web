@@ -1,7 +1,7 @@
 export const SITE_NAME = "Andarz";
-export const SITE_TAGLINE = "Learn. Grow. Succeed.";
+export const SITE_TAGLINE = "Transforming Education in Tajikistan";
 export const SITE_DESCRIPTION =
-  "Andarz is an educational platform offering high-quality online courses in technology, design, and more.";
+  "Andarz LLC is an educational and publishing organization dedicated to improving education quality in Tajikistan through professional development, STEM programs, digital analytics, and consulting.";
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const NAV_LINKS = [
@@ -14,12 +14,12 @@ export const NAV_LINKS = [
 
 export const COURSE_CATEGORIES = [
   "All",
-  "Web Development",
-  "Backend Development",
-  "Data Science",
-  "Design",
-  "Mobile Development",
-  "DevOps",
+  "Professional Development",
+  "STEM Programs",
+  "Education Monitoring",
+  "Digital Ecosystem",
+  "Publishing",
+  "Consulting",
 ];
 
 export const COURSE_LEVELS = ["All", "beginner", "intermediate", "advanced"];
