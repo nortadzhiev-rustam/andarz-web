@@ -7,6 +7,7 @@ export interface HeroSlide {
 }
 
 export interface Translations {
+  siteName: string;
   nav: {
     home: string;
     courses: string;
@@ -158,6 +159,7 @@ export interface Translations {
 
 export const translations: Record<Language, Translations> = {
   en: {
+    siteName: "Andarz",
     nav: {
       home: "Home",
       courses: "Courses",
@@ -200,10 +202,10 @@ export const translations: Record<Language, Translations> = {
         experts: "Experts",
       },
       cards: {
-        schools: { title: "15–20 Schools", subtitle: "Partner institutions" },
+        schools: { title: "20 Schools", subtitle: "Partner institutions" },
         seminars: {
           title: "20+ Seminars",
-          subtitle: "300–500 participants each",
+          subtitle: "500+ participants each",
         },
         featured: {
           label: "STEM Programme",
@@ -234,7 +236,7 @@ export const translations: Record<Language, Translations> = {
       cta: {
         title: "Partner with Andarz",
         subtitle:
-          "Join 15–20 schools and 10–15 kindergartens already transforming education in Tajikistan.",
+          "Join 20 schools and 15 kindergartens already transforming education in Tajikistan.",
         button: "Get in Touch",
       },
       featuredCourses: {
@@ -419,6 +421,7 @@ export const translations: Record<Language, Translations> = {
   },
 
   ru: {
+    siteName: "Андарз",
     nav: {
       home: "Главная",
       courses: "Курсы",
@@ -466,12 +469,12 @@ export const translations: Record<Language, Translations> = {
       },
       cards: {
         schools: {
-          title: "15–20 школ",
+          title: "20 школ",
           subtitle: "Партнёрские учреждения",
         },
         seminars: {
           title: "20+ семинаров",
-          subtitle: "300–500 участников каждый",
+          subtitle: "500+ участников каждый",
         },
         featured: {
           label: "STEM-программа",
@@ -505,7 +508,7 @@ export const translations: Record<Language, Translations> = {
       cta: {
         title: "Партнёрство с Андарз",
         subtitle:
-          "Присоединяйтесь к 15–20 школам и 10–15 детским садам, уже трансформирующим образование в Таджикистане.",
+          "Присоединяйтесь к 20 школам и 15 детским садам, уже трансформирующим образование в Таджикистане.",
         button: "Связаться с нами",
       },
       featuredCourses: {
@@ -695,6 +698,7 @@ export const translations: Record<Language, Translations> = {
   },
 
   tj: {
+    siteName: "Андарз",
     nav: {
       home: "Асосӣ",
       courses: "Курсҳо",
@@ -742,12 +746,12 @@ export const translations: Record<Language, Translations> = {
       },
       cards: {
         schools: {
-          title: "15–20 мактаб",
+          title: "20 мактаб",
           subtitle: "Муассисаҳои шарик",
         },
         seminars: {
           title: "Зиёда аз 20 семинар",
-          subtitle: "300–500 иштирокчӣ дар ҳар яке",
+          subtitle: "500+ иштирокчӣ дар ҳар яке",
         },
         featured: {
           label: "Барномаи STEM",
@@ -784,7 +788,7 @@ export const translations: Record<Language, Translations> = {
       cta: {
         title: "Ҳамкорӣ бо Андарз",
         subtitle:
-          "Ба 15–20 мактаб ва 10–15 кӯдакистоне ҳамроҳ шавед, ки аллакай таҳсилро дар Тоҷикистон тағйир медиҳанд.",
+          "Ба 20 мактаб ва 15 кӯдакистоне ҳамроҳ шавед, ки аллакай таҳсилро дар Тоҷикистон тағйир медиҳанд.",
         button: "Бо мо тамос гиред",
       },
       featuredCourses: {

@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
+import Image from "next/image";
+import { NAV_LINKS } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
@@ -12,8 +13,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="text-2xl font-bold text-white">
-              {SITE_NAME}
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/IMG_7393.png"
+                alt={t.siteName}
+                width={32}
+                height={32}
+                className="object-contain"
+              />
+              <span className="text-2xl font-bold text-white">{t.siteName}</span>
             </Link>
             <p className="mt-3 text-sm text-gray-400 max-w-xs">
               {t.footer.description}
@@ -57,7 +65,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
-          &copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
+          &copy; {new Date().getFullYear()} {t.siteName}. All rights reserved.
         </div>
       </div>
     </footer>
