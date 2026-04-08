@@ -7,10 +7,9 @@ import { SITE_NAME } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 
-const NAV_KEYS = ["home", "courses", "blog", "about", "contact"] as const;
+const NAV_KEYS = ["home", "blog", "about", "contact"] as const;
 const NAV_HREFS: Record<(typeof NAV_KEYS)[number], string> = {
   home: "/",
-  courses: "/courses",
   blog: "/blog",
   about: "/about",
   contact: "/contact",

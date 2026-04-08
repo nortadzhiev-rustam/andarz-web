@@ -86,12 +86,6 @@ export default function Hero() {
             {/* CTA buttons */}
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="/courses"
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-700 to-blue-900 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5 hover:from-blue-600 hover:to-blue-800 hover:shadow-blue-500/50"
-              >
-                {t.hero.browseCourses}
-              </Link>
-              <Link
                 href="/about"
                 className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-6 py-3 text-base font-semibold text-gray-700 transition-all hover:-translate-y-0.5 hover:bg-gray-50"
               >

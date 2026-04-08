@@ -6,20 +6,7 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:30
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Courses", href: "/courses" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
-
-export const COURSE_CATEGORIES = [
-  "All",
-  "Professional Development",
-  "STEM Programs",
-  "Education Monitoring",
-  "Digital Ecosystem",
-  "Publishing",
-  "Consulting",
-];
-
-export const COURSE_LEVELS = ["All", "beginner", "intermediate", "advanced"];
