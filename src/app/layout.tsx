@@ -3,6 +3,7 @@ import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
 import { CartProvider } from "@/context/CartContext";
 import { LanguageProvider } from "@/context/LanguageContext";
+import LangUpdater from "@/components/layout/LangUpdater";
 import { SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -19,11 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="tg" className="h-full antialiased">
       <body className="min-h-full flex flex-col font-sans">
         <AuthProvider>
           <CartProvider>
-            <LanguageProvider>{children}</LanguageProvider>
+            <LanguageProvider>
+              <LangUpdater />
+              {children}
+            </LanguageProvider>
           </CartProvider>
         </AuthProvider>
       </body>

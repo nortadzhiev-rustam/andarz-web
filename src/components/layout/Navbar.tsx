@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { SITE_NAME } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 
@@ -59,12 +59,19 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
+            <Image
+              src={scrolled ? "/IMG_7393.png" : "/IMG_7394.png"}
+              alt={t.siteName}
+              width={36}
+              height={36}
+              className="object-contain"
+            />
             <span
               className={`text-2xl font-bold drop-shadow-sm transition-colors duration-300 ${
                 scrolled ? "text-white" : "text-gray-900"
               }`}
             >
-              {SITE_NAME}
+              {t.siteName}
             </span>
           </Link>
 

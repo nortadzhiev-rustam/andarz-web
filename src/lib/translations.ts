@@ -7,6 +7,7 @@ export interface HeroSlide {
 }
 
 export interface Translations {
+  siteName: string;
   nav: {
     home: string;
     courses: string;
@@ -158,6 +159,7 @@ export interface Translations {
 
 export const translations: Record<Language, Translations> = {
   en: {
+    siteName: "Andarz",
     nav: {
       home: "Home",
       courses: "Courses",
@@ -419,6 +421,7 @@ export const translations: Record<Language, Translations> = {
   },
 
   ru: {
+    siteName: "Андарз",
     nav: {
       home: "Главная",
       courses: "Курсы",
@@ -695,6 +698,7 @@ export const translations: Record<Language, Translations> = {
   },
 
   tj: {
+    siteName: "Андарз",
     nav: {
       home: "Асосӣ",
       courses: "Курсҳо",
