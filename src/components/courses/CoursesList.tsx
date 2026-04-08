@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Course } from "@/types/course";
 import CourseCard from "@/components/courses/CourseCard";
 import CourseFilter from "@/components/courses/CourseFilter";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface CoursesListProps {
   courses: Course[];
@@ -11,6 +12,7 @@ interface CoursesListProps {
 }
 
 export default function CoursesList({ courses, initialCategory = "All" }: CoursesListProps) {
+  const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedLevel, setSelectedLevel] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
@@ -33,7 +35,7 @@ export default function CoursesList({ courses, initialCategory = "All" }: Course
       <div className="mb-6">
         <input
           type="text"
-          placeholder="Search courses..."
+          placeholder={t.courses.searchPlaceholder}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -50,7 +52,10 @@ export default function CoursesList({ courses, initialCategory = "All" }: Course
 
       {/* Results */}
       <p className="mt-4 text-sm text-gray-500">
-        {filtered.length} course{filtered.length !== 1 ? "s" : ""} found
+        {filtered.length}{" "}
+        {filtered.length === 1
+          ? t.courses.resultsSingular
+          : t.courses.resultsPlural}
       </p>
 
       {filtered.length > 0 ? (
@@ -61,8 +66,8 @@ export default function CoursesList({ courses, initialCategory = "All" }: Course
         </div>
       ) : (
         <div className="mt-16 text-center text-gray-500">
-          <p className="text-lg font-medium">No courses found.</p>
-          <p className="mt-1 text-sm">Try adjusting your filters or search query.</p>
+          <p className="text-lg font-medium">{t.courses.noResults}</p>
+          <p className="mt-1 text-sm">{t.courses.noResultsHint}</p>
         </div>
       )}
     </div>

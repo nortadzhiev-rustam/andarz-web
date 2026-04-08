@@ -3,9 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useAuth } from "@/context/AuthContext";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function LoginPage() {
   const { login, isLoading } = useAuth();
+  const { t } = useLanguage();
+  const a = t.auth.login;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -16,13 +19,13 @@ export default function LoginPage() {
     try {
       await login(email, password);
     } catch {
-      setError("Invalid email or password. Please try again.");
+      setError(a.error);
     }
   }
 
   return (
     <>
-      <h2 className="text-2xl font-bold text-gray-900">Sign in to your account</h2>
+      <h2 className="text-2xl font-bold text-gray-900">{a.title}</h2>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-5">
         {error && (
@@ -33,7 +36,7 @@ export default function LoginPage() {
 
         <div>
           <label htmlFor="login-email" className="block text-sm font-medium text-gray-700">
-            Email address
+            {a.emailLabel}
           </label>
           <input
             id="login-email"
@@ -48,7 +51,7 @@ export default function LoginPage() {
 
         <div>
           <label htmlFor="login-password" className="block text-sm font-medium text-gray-700">
-            Password
+            {a.passwordLabel}
           </label>
           <input
             id="login-password"
@@ -66,14 +69,14 @@ export default function LoginPage() {
           disabled={isLoading}
           className="w-full rounded-lg bg-blue-700 py-2.5 text-sm font-semibold text-white hover:bg-blue-600 disabled:opacity-60 transition-colors"
         >
-          {isLoading ? "Signing in…" : "Sign in"}
+          {isLoading ? a.submitting : a.submit}
         </button>
       </form>
 
       <p className="mt-6 text-center text-sm text-gray-500">
-        Don&apos;t have an account?{" "}
+        {a.noAccount}{" "}
         <Link href="/register" className="font-semibold text-blue-700 hover:text-blue-600">
-          Sign up
+          {a.signUp}
         </Link>
       </p>
     </>
