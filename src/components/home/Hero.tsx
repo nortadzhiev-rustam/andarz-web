@@ -2,32 +2,31 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { SITE_TAGLINE } from "@/lib/constants";
 
 const slides = [
   {
     id: 0,
-    badge: "🌐 Web Development",
-    headline: ["Master", "Modern Web", "Development"],
+    badge: "👩‍🏫 Professional Development",
+    headline: ["Elevating", "Education Quality", "in Tajikistan"],
     accentIdx: 1,
     description:
-      "Build full-stack applications with React, Next.js, and Node.js — all taught by industry professionals at your own pace.",
+      "Practical seminars for school leaders, teachers, educators, and parents — building professional competencies that drive real academic results.",
   },
   {
     id: 1,
-    badge: "📊 Data Science",
-    headline: ["Dive Into", "Data Science", "& Machine Learning"],
+    badge: "🔬 STEM Programs",
+    headline: ["Science of", "the Future", "for Every School"],
     accentIdx: 1,
     description:
-      "Analyze real-world data, build predictive models, and unlock insights using Python, NumPy, Pandas, and scikit-learn.",
+      "International-standard STEM curriculum taught in English with a spiral methodology and digital integration — localised for Tajikistan's schools.",
   },
   {
     id: 2,
-    badge: "🎨 UI/UX Design",
-    headline: ["Design", "Beautiful", "User Experiences"],
+    badge: "📊 Digital Ecosystem",
+    headline: ["Smart Analytics", "for Modern", "Education"],
     accentIdx: 1,
     description:
-      "Create stunning, accessible interfaces and seamless user journeys with Figma, Tailwind, and modern design systems.",
+      "Digital testing, knowledge assessment, and data-driven analytics help identify learning gaps and provide meaningful feedback for schools and families.",
   },
 ];
 
@@ -146,10 +145,10 @@ export default function Hero() {
             {/* Stats row */}
             <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
-                { label: "Students", value: "20,000+" },
-                { label: "Courses", value: "150+" },
-                { label: "Instructors", value: "50+" },
-                { label: "Completion", value: "92%" },
+                { label: "Schools Served", value: "15–20" },
+                { label: "Seminars / Year", value: "20+" },
+                { label: "Books Published", value: "19+" },
+                { label: "Experts", value: "18" },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -179,94 +178,93 @@ export default function Hero() {
               style={{ animationDelay: "8s", animationDirection: "reverse" }}
             />
 
-            {/* Card: Top-left — Rating */}
+            {/* Card: Top-left — Schools */}
             <div
               className="animate-float absolute left-8 top-8 w-52 rounded-2xl border border-gray-200 bg-white p-4 shadow-lg"
               style={{ animationDelay: "0s" }}
             >
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/50 text-xl">
-                  ⭐
+                  🏫
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-gray-900">4.9 Rating</p>
-                  <p className="text-xs text-gray-500">540+ reviews</p>
+                  <p className="text-sm font-bold text-gray-900">15–20 Schools</p>
+                  <p className="text-xs text-gray-500">Partner institutions</p>
                 </div>
               </div>
             </div>
 
-            {/* Card: Top-right — Students */}
+            {/* Card: Top-right — Seminars */}
             <div
               className="animate-float-alt absolute right-8 top-8 w-52 rounded-2xl border border-gray-200 bg-white p-4 shadow-lg"
               style={{ animationDelay: "0.5s" }}
             >
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600/50 text-xl">
-                  👨‍🎓
+                  🎓
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-gray-900">20,000+</p>
-                  <p className="text-xs text-gray-500">Active students</p>
+                  <p className="text-sm font-bold text-gray-900">20+ Seminars</p>
+                  <p className="text-xs text-gray-500">300–500 participants each</p>
                 </div>
               </div>
             </div>
 
-            {/* Central featured course card */}
+            {/* Central featured card */}
             <div
               className="animate-float absolute left-1/2 top-1/2 w-72 -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-gray-200 bg-white p-6 shadow-xl"
               style={{ animationDelay: "1s" }}
             >
               <div className="mb-4 flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-blue-900 text-2xl">
-                  📚
+                  🔬
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-blue-600">
-                    Featured Course
+                    STEM Programme
                   </p>
-                  <p className="font-bold text-gray-900">React.js for Beginners</p>
+                  <p className="font-bold text-gray-900">Science of the Future</p>
                 </div>
               </div>
               <div className="flex items-center justify-between text-xs text-gray-500">
-                <span>⭐ 4.9 (540)</span>
-                <span>18 hours</span>
-                <span className="font-semibold text-green-600">$39.99</span>
+                <span>🌍 International standards</span>
+                <span>🇹🇯 Localised</span>
               </div>
               {/* Progress bar */}
               <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-gray-200">
-                <div className="h-1.5 w-3/4 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />
+                <div className="h-1.5 w-4/5 rounded-full bg-gradient-to-r from-blue-600 to-blue-400" />
               </div>
-              <p className="mt-1.5 text-xs text-gray-500">75% completed by students</p>
+              <p className="mt-1.5 text-xs text-gray-500">Spiral methodology + digital integration</p>
             </div>
 
-            {/* Card: Bottom-left — Completion */}
+            {/* Card: Bottom-left — Experts */}
             <div
               className="animate-float-alt absolute bottom-8 left-8 w-52 rounded-2xl border border-gray-200 bg-white p-4 shadow-lg"
               style={{ animationDelay: "2s" }}
             >
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/50 text-xl">
-                  🏆
+                  👩‍🏫
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-gray-900">92% Complete</p>
-                  <p className="text-xs text-gray-500">Avg. completion rate</p>
+                  <p className="text-sm font-bold text-gray-900">18 Experts</p>
+                  <p className="text-xs text-gray-500">12 subject + 6 preschool</p>
                 </div>
               </div>
             </div>
 
-            {/* Card: Bottom-right — Courses */}
+            {/* Card: Bottom-right — Books */}
             <div
               className="animate-float absolute bottom-8 right-8 w-52 rounded-2xl border border-gray-200 bg-white p-4 shadow-lg"
               style={{ animationDelay: "3s" }}
             >
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-500/50 text-xl">
-                  💡
+                  📚
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-gray-900">150+ Courses</p>
-                  <p className="text-xs text-gray-500">Expert-led content</p>
+                  <p className="text-sm font-bold text-gray-900">19+ Books</p>
+                  <p className="text-xs text-gray-500">Published & translated</p>
                 </div>
               </div>
             </div>

@@ -12,23 +12,23 @@ export default async function HomePage() {
       <Hero />
       <FeaturedCourses courses={featuredCourses} />
 
-      {/* Categories section */}
+      {/* Services section */}
       <section className="py-16 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 text-center">
-            Browse by Category
+            Our Services
           </h2>
           <p className="mt-2 text-center text-gray-600">
-            Find the right course for your learning goals.
+            A comprehensive approach to improving education quality across Tajikistan.
           </p>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
             {[
-              { name: "Web Development", icon: "🌐" },
-              { name: "Data Science", icon: "📊" },
-              { name: "Design", icon: "🎨" },
-              { name: "Backend Development", icon: "⚙️" },
-              { name: "Mobile Development", icon: "📱" },
-              { name: "DevOps", icon: "🚀" },
+              { name: "Professional Development", icon: "👩‍🏫" },
+              { name: "Education Monitoring", icon: "📋" },
+              { name: "Digital Ecosystem", icon: "📊" },
+              { name: "STEM Programs", icon: "🔬" },
+              { name: "Publishing", icon: "📚" },
+              { name: "Consulting", icon: "🤝" },
             ].map((cat) => (
               <Link
                 key={cat.name}
@@ -49,16 +49,16 @@ export default async function HomePage() {
       <section className="py-20 bg-blue-700">
         <div className="mx-auto max-w-3xl px-4 text-center">
           <h2 className="text-3xl font-extrabold text-white">
-            Start Learning Today
+            Partner with Andarz
           </h2>
           <p className="mt-4 text-lg text-blue-100">
-            Join over 20,000 students and unlock your career potential.
+            Join 15–20 schools and 10–15 kindergartens already transforming education in Tajikistan.
           </p>
           <Link
-            href="/register"
+            href="/contact"
             className="mt-8 inline-block rounded-lg bg-white px-6 py-3 text-base font-semibold text-blue-700 shadow hover:bg-blue-50 transition-colors"
           >
-            Create a Free Account
+            Get in Touch
           </Link>
         </div>
       </section>

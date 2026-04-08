@@ -13,8 +13,7 @@ export default function Footer() {
             </Link>
             <p className="mt-2 text-sm text-blue-400 font-medium">{SITE_TAGLINE}</p>
             <p className="mt-3 text-sm text-gray-400 max-w-xs">
-              Empowering learners worldwide with high-quality online education in
-              technology, design, and beyond.
+              Improving education quality in Tajikistan through professional development, STEM programmes, digital analytics, publishing, and consulting — since 2023.
             </p>
           </div>
 
