@@ -20,16 +20,15 @@ export default function HomeServicesSection() {
           <p className="mt-2 text-center text-gray-600">{services.subtitle}</p>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
             {services.items.map((name, idx) => (
-              <Link
+              <div
                 key={name}
-                href={`/courses?category=${encodeURIComponent(name)}`}
-                className="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-100 hover:ring-blue-300 hover:shadow-md transition"
+                className="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-100"
               >
                 <span className="text-3xl">{SERVICE_ICONS[idx]}</span>
                 <span className="mt-2 text-sm font-medium text-gray-700">
                   {name}
                 </span>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
