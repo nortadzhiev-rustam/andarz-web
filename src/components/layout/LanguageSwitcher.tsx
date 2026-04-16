@@ -31,14 +31,14 @@ export default function LanguageSwitcher({ scrolled }: LanguageSwitcherProps) {
         onClick={() => setOpen(!open)}
         aria-label="Select language"
         aria-expanded={open}
-        className={`flex items-center gap-1.5 rounded-xl px-3 py-1.5 text-sm font-medium transition-all duration-200 ${
+        className={`flex items-center gap-1 rounded-3xl px-2 py-1.5 text-sm font-medium transition-all duration-200 ${
           scrolled
             ? "border border-white/25 bg-white/10 text-white hover:bg-white/20"
             : "border border-gray-300/60 bg-gray-100/60 text-gray-700 hover:bg-gray-200/70"
         }`}
       >
         <span>{current.flag}</span>
-        <span className="hidden sm:inline">{current.label}</span>
+        <span className="hidden sm:inline md:hidden">{current.label}</span>
         <svg
           className={`h-3.5 w-3.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
           fill="none"

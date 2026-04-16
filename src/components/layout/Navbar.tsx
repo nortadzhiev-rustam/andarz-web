@@ -199,7 +199,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/register"
-              className={`rounded-xl px-4 py-2 text-sm font-semibold shadow-md transition-all duration-300 hover:-translate-y-px ${
+              className={`rounded-3xl px-4 py-2 text-sm font-semibold shadow-md transition-all duration-300 hover:-translate-y-px ${
                 scrolled
                   ? "border border-white/30 bg-white/15 text-white shadow-black/10 backdrop-blur-sm hover:bg-white/25"
                   : "border border-blue-600/30 bg-blue-600/10 text-blue-700 hover:bg-blue-600/20"
