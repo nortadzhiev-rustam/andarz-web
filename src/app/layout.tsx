@@ -4,6 +4,7 @@ import { AuthProvider } from "@/context/AuthContext";
 import { CartProvider } from "@/context/CartContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import LangUpdater from "@/components/layout/LangUpdater";
+import NavbarWrapper from "@/components/layout/NavbarWrapper";
 import { SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
           <CartProvider>
             <LanguageProvider>
               <LangUpdater />
+              <NavbarWrapper />
               {children}
             </LanguageProvider>
           </CartProvider>
