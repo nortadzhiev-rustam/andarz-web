@@ -159,7 +159,7 @@ export interface Translations {
 
 export const translations: Record<Language, Translations> = {
   en: {
-    siteName: "Andarz",
+    siteName: "ANDARZ",
     nav: {
       home: "Home",
       courses: "Courses",
@@ -421,7 +421,7 @@ export const translations: Record<Language, Translations> = {
   },
 
   ru: {
-    siteName: "Андарз",
+    siteName: "АНДАРЗ",
     nav: {
       home: "Главная",
       courses: "Курсы",
@@ -698,7 +698,7 @@ export const translations: Record<Language, Translations> = {
   },
 
   tj: {
-    siteName: "Андарз",
+    siteName: "АНДАРЗ",
     nav: {
       home: "Асосӣ",
       courses: "Курсҳо",
